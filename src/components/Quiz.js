@@ -49,7 +49,7 @@ const Quiz = () => {
       <h1>Hi Sam😄, Guess the Capital City🗺️</h1>
       {currentCountry.name && (
         <div>
-          <h2>What is the capital city of {currentCountry.name}?</h2>
+          <h2>What is the capital city of <span>{currentCountry.name}?</span></h2>
           <form onSubmit={handleSubmit}>
             <input type="text" value={userInput} onChange={handleInputChange} ref={inputRef} />
             <button type="submit" disabled={!userInput}>Check Answer</button>
@@ -58,7 +58,7 @@ const Quiz = () => {
             <p className='correct'>Correct🥳 </p>
           )}
           {isCorrect === false && (
-            <p className='incorrect'>Incorrect😞. The correct answer is {currentCountry.capital}.</p>
+            <p className='incorrect'>Incorrect😞. The correct answer is <span>{currentCountry.capital}.</span></p>
           )}
           {isCorrect !== null && (
             <button onClick={handleNextQuestion}>Next Question</button>
