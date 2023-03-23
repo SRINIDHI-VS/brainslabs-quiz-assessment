@@ -49,6 +49,8 @@ const Quiz = () => {
     setIsCorrect(null);
   };
 
+
+  // Added Spinner effect till the data being fetched from API, once data is received then the data will be showcased and spinner will be set to false.
   return isLoading ? <Spinner /> : (
     <div className='container'>
       <h1>Hi Sam😄, Guess the Capital City🗺️</h1>
@@ -59,6 +61,8 @@ const Quiz = () => {
             <input type="text" value={userInput} onChange={handleInputChange} ref={inputRef} />
             <button type="submit" disabled={!userInput}>Check Answer</button>
           </form>
+
+          {/* Conditional Rendering According to the user inputs and validation */}
           {isCorrect === true && (
             <p className='correct'>Correct🥳</p>
           )}
