@@ -29,10 +29,12 @@ const Quiz = () => {
     }
   }, [countries]);
 
+  // Handling onchange of the input tag 
   const handleInputChange = event => {
     setUserInput(event.target.value);
   };
 
+  // Handling onSubmit button 
   const handleSubmit = event => {
     event.preventDefault();
     if (userInput.toLowerCase() === currentCountry.capital.toLowerCase()) {
@@ -42,6 +44,7 @@ const Quiz = () => {
     }
   };
 
+  // Handling next question button 
   const handleNextQuestion = () => {
     const randomIndex = Math.floor(Math.random() * countries.length);
     setCurrentCountry(countries[randomIndex]);
@@ -67,7 +70,7 @@ const Quiz = () => {
             <p className='correct'>Correct🥳</p>
           )}
           {isCorrect === false && (
-            <p className='incorrect'>Incorrect😞.The correct answer is <span>{currentCountry.capital}.</span></p>
+            <p className='incorrect'>Oops...That's Incorrect😞<br /><span className='incorrect-white'>The correct answer is</span><span className='incorrect'>{currentCountry.capital}</span></p>
           )}
           {isCorrect !== null && (
             <button onClick={handleNextQuestion}>Next👉</button>

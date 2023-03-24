@@ -1,32 +1,22 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Alkatra', cursive;
 }
 
 body {
-  animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  animation: fadeInAnimation ease 3s;
 }
 
 .container {
   width: 100%;
   height: 100vh;
   display: flex;
-  background: #3B3B3B;
   align-items: center;
+  background: #3B3B3B;
   flex-direction: column;
   justify-content: center;
 
@@ -41,8 +31,8 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  border-color: #0feea4;
-  box-shadow: rgba(0, 0, 0, 0.625) 0px 5px 15px;
+  border:1px solid #0feea4;
+  box-shadow: rgba(0, 0, 0, 0.625) 0px 10px 15px;
 }
 
 span {
@@ -50,6 +40,18 @@ span {
   font-size: 2rem;
   font-weight: 700;
   text-decoration: underline;
+  text-decoration-color:#0feea4;
+}
+
+span.incorrect
+{
+  color:green;
+  text-decoration: underline;
+}
+span.incorrect-white
+{
+  color: white;
+  text-decoration: none;
 }
 
 h1 {
@@ -70,12 +72,12 @@ form {
 }
 
 input[type="text"] {
-  padding: 10px;
   width: 22rem;
+  padding: 10px;
   font-size: 18px;
-  border-color: #0feea4;
-  border-radius: 5px;
   margin-right: 10px;
+  border-radius: 5px;
+  border-bottom: 3px solid #0feea4;
   box-shadow: rgba(0, 0, 0, 0.593) 0px 5px 15px;
 }
 
@@ -95,6 +97,7 @@ button {
 
 button[disabled] {
   background-color: grey;
+  border: 1px solid #0feea4;
 }
 
 button[type="submit"]:hover,
@@ -117,6 +120,16 @@ p.incorrect {
   font-size: 2rem;
 }
 
+/* Animation  */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 /* MediaQuery */
 
