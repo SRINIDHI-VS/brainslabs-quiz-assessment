@@ -26,7 +26,7 @@ The app works as follows:
 - The app then displays a message indicating whether the user's answer was correct or not, and a button to move to the next question.
 - When the user clicks the next question button, the handleNextQuestion function selects a new random country and updates the currentCountry state variable. The userInput and isCorrect state variables are also reset.
 
-# screenshots
+# Screenshots
 
 ![image](https://user-images.githubusercontent.com/76029867/227423540-52e30bdd-4c38-462a-8740-6942d36b7db1.png)
 ![image](https://user-images.githubusercontent.com/76029867/227423636-e7d43499-a0b1-4afd-90d8-380d28670522.png)
