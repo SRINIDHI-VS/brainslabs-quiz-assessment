@@ -14,17 +14,17 @@ This React application is a quiz game that asks the user to guess the capital ci
 # How it works
 The app uses React hooks to manage the state and the effects. The main components of the app are:
 
-Quiz: The main component that renders the quiz game. It fetches the data from the API using axios, and uses the useState, useEffect and useRef hooks to manage the state and the side effects.
-Spinner: A loading spinner component that is displayed while the data is being fetched from the API.
+- Quiz: The main component that renders the quiz game. It fetches the data from the API using axios, and uses the useState, useEffect and useRef hooks to manage the state and the side effects.
+- Spinner: A loading spinner component that is displayed while the data is being fetched from the API.
 The app works as follows:
 
-When the Quiz component mounts, it fetches the data about the countries and their capital cities from the API using axios. While the data is being fetched, a loading spinner is displayed using the Spinner component.
-When the data is received from the API, it is stored in the countries state variable using the setCountries function. The loading spinner is then hidden.
-When the countries state variable is updated, a useEffect hook runs and selects a random country from the list using the setCurrentCountry function. The selected country is stored in the currentCountry state variable.
-The app then displays the name of the selected country and asks the user to guess its capital city.
-When the user submits their answer, the handleSubmit function checks if the answer is correct or not. If the answer is correct, the isCorrect state variable is set to true, otherwise it is set to false.
-The app then displays a message indicating whether the user's answer was correct or not, and a button to move to the next question.
-When the user clicks the next question button, the handleNextQuestion function selects a new random country and updates the currentCountry state variable. The userInput and isCorrect state variables are also reset.
+- When the Quiz component mounts, it fetches the data about the countries and their capital cities from the API using axios. While the data is being fetched, a loading spinner is displayed using the Spinner component.
+- When the data is received from the API, it is stored in the countries state variable using the setCountries function. The loading spinner is then hidden.
+- When the countries state variable is updated, a useEffect hook runs and selects a random country from the list using the setCurrentCountry function. The selected country is stored in the currentCountry state variable.
+- The app then displays the name of the selected country and asks the user to guess its capital city.
+- When the user submits their answer, the handleSubmit function checks if the answer is correct or not. If the answer is correct, the isCorrect state variable is set to true, otherwise it is set to false.
+- The app then displays a message indicating whether the user's answer was correct or not, and a button to move to the next question.
+- When the user clicks the next question button, the handleNextQuestion function selects a new random country and updates the currentCountry state variable. The userInput and isCorrect state variables are also reset.
 
 ## Available Scripts
 
