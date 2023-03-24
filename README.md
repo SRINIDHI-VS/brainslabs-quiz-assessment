@@ -6,10 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This React application is a quiz game that asks the user to guess the capital city of a random country. It uses the countriesnow.space API to fetch the data about the countries and their capital cities.
 
 # How to run the app
-Clone the repository to your local machine.
-Navigate to the project directory and run npm install to install the dependencies.
-Run npm start to start the development server.
-Open http://localhost:3000 in your web browser to view the app.
+- Clone the repository to your local machine.
+- Navigate to the project directory and run npm install to install the dependencies.
+- Run npm start to start the development server.
+- Open http://localhost:3000 in your web browser to view the app.
 
 # How it works
 The app uses React hooks to manage the state and the effects. The main components of the app are:
